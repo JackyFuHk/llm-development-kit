@@ -3,7 +3,7 @@ Rate-limiting the OpenAI API
 
 1. Vendor-enforced caps  
    • Both OpenAI and Azure OpenAI set hard per-key, per-deployment limits on RPM, TPM (tokens per minute) and QPS.  
-   • Exceeding any limit instantly triggers `429 Too Many Requests` or `503 Rate Limited`; retries are **not guaranteed to succeed**.  
+   • Exceeding any limit instantly triggers `429 Too Many Requests` or `503 Rate Limited`; retries are not guaranteed to succeed.  
    • Proactively rate-limiting in your code reduces the odds of 429/503 and raises overall success rates.
 
 2. Cost control  
