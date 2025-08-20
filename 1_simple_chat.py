@@ -23,7 +23,7 @@ model = AutoGPTQForCausalLM.from_pretrained(
 # 测试推理
 prompt = '你好，世界，请问你叫什么名字？'
 inputs = tokenizer(prompt, return_tensors='pt').to('cuda:0')
-outputs = model.generate(**inputs,max_new_tokens=200)
+outputs = model.generate(**inputs,max_new_tokens=200) 
 
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
